@@ -34,7 +34,7 @@ class branchesModel extends CI_Model
         return['msg'=>'Gagal','error'=>true];
     }
     public function update($request,$id) {
-        $updateData=['address'=>$request->address,'address'=>$request->name];
+        $updateData=['name'=>$request->name,'phoneNumber'=>$request->phoneNumber,'address'=>$request->address];
         if($this->db->where('id',$id)->update($this->table,$updateData)){ 
             return['msg'=>'Berhasil','error'=>false];
         }
